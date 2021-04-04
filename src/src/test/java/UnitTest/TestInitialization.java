@@ -81,7 +81,7 @@ public class TestInitialization {
 
     public static void startServerAPI() {
         try {
-            final InputStream inputS = new ProcessBuilder("java", "-jar", "../../Application_Being_Tested/runTodoManagerRestAPI-1.5.5.jar").start().getInputStream();
+            final InputStream inputS = new ProcessBuilder("java", "-jar", "../runTodoManagerRestAPI-1.5.5.jar").start().getInputStream();
             final InputStreamReader inputSR = new InputStreamReader(inputS);
             final BufferedReader output = new BufferedReader(inputSR);
             while (true) {

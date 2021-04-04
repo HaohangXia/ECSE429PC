@@ -147,7 +147,7 @@ public abstract class ApiTest implements Closeable {
         return requestApi(httpPut, contentType, responseType);
     }
 
-    <T> ApiResponse<T> httpDelete(String path, Class<T> responseType) throws IOException {
+    public <T> ApiResponse<T> httpDelete(String path, Class<T> responseType) throws IOException {
         return requestApi(new HttpDelete(API_BASE + path), CONTENT_TYPE_JSON, responseType);
     }
 
