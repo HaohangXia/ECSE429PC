@@ -32,7 +32,6 @@ public class TodoApiCategories {
                 .assertOkAndFormed();
         CategoriesReadResult categories = response.getBodyParsed();
         for(Category cate : categories.getCategories()){
-            String title=this.random.nextInt()+"";
             String payload= "<category><title>"+ "title_"+this.random.nextInt()+"</title><description>"+"description_"+this.random.nextInt()+"</description></category>";
             this.apiTodosTest.httpPost("/categories/"+cate.getId(),CONTENT_TYPE_XML, payload, CategoriesWriteResult.class);
         }

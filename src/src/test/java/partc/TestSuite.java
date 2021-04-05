@@ -8,7 +8,7 @@ import org.junit.runners.Suite;
 @Suite.SuiteClasses({
         TodoApiConsumerTest.class,
         TodoApiCategoriesTest.class,
-        //TODO 其他人的test？
+        TodoApiProjectsTest.class
 })
 public class TestSuite {
 }  
